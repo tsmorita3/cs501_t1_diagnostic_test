@@ -56,7 +56,6 @@ class RegisterAPI(MethodView):
             }
             return make_response(jsonify(responseObject)), 202
 
-
 # define the API resources
 registration_view = RegisterAPI.as_view('register_api')
 
@@ -66,3 +65,4 @@ auth_blueprint.add_url_rule(
     view_func=registration_view,
     methods=['POST', 'GET']
 )
+
